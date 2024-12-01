@@ -1,4 +1,4 @@
-/* Estilo para toda la página */
+/* Estilo global */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -8,7 +8,7 @@ body {
   text-align: center;
 }
 
-/* Estilo para el título principal */
+/* Estilo para el título */
 h1 {
   color: #007BFF;
   margin-top: 50px;
@@ -16,37 +16,37 @@ h1 {
 
 /* Estilos para la barra de navegación */
 nav {
-  background-color: #007BFF; /* Color azul para el fondo */
-  padding: 10px 0; /* Espaciado superior e inferior */
+  background-color: #007BFF;
+  padding: 10px 0;
 }
 
-/* Estilo para el menú en pantallas grandes */
+/* Estilo para los elementos del menú */
 .menu {
-  list-style: none; /* Elimina los puntos de la lista */
-  display: flex; /* Para alinear los elementos en una fila */
-  justify-content: center; /* Centra los elementos */
-  margin: 0; /* Elimina el margen por defecto */
-  padding: 0; /* Elimina el padding por defecto */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
-  margin: 0 15px; /* Espaciado entre los elementos de la lista */
+  margin: 0 15px;
 }
 
 .menu a {
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  color: white; /* Color blanco para el texto */
-  font-weight: bold; /* Hace el texto en negrita */
-  font-size: 16px; /* Tamaño de la fuente */
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .menu a:hover {
-  text-decoration: underline; /* Subraya el texto cuando pasas el ratón sobre el enlace */
+  text-decoration: underline;
 }
 
-/* Estilo para el ícono de tres rayas */
+/* Estilo para el icono de las tres rayas */
 .menu-toggle {
-  display: none; /* Inicialmente, el ícono no se muestra */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
@@ -59,25 +59,107 @@ nav {
   margin: 5px 0;
 }
 
-/* Mostrar el ícono de tres rayas solo en pantallas pequeñas */
+/* Estilo para pantallas pequeñas */
 @media (max-width: 768px) {
+  /* Mostrar el icono de las tres rayas en pantallas pequeñas */
   .menu-toggle {
-    display: flex; /* Muestra las tres rayas */
+    display: flex;
   }
 
+  /* Ocultar el menú inicialmente */
   .menu {
-    display: none; /* Oculta el menú inicialmente */
-    width: 100%; /* Asegura que el menú ocupe toda la pantalla */
-    flex-direction: column; /* Los elementos del menú se apilan */
-    background-color: #007BFF; /* Fondo azul */
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #007BFF;
     text-align: center;
   }
 
+  /* Mostrar el menú cuando esté activo */
   .menu.active {
-    display: flex; /* Muestra el menú cuando se activa */
+    display: flex;
   }
 
+  /* Espaciado entre los elementos del menú */
   .menu li {
-    margin: 10px 0; /* Añade un poco de espacio entre los elementos del menú */
+    margin: 10px 0;
+  }
+}
+
+/* Estilos generales para la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Estilo para el carrusel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Estilo para las flechas de navegación */
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Agregar efectos de hover */
+.carousel-item:hover .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Aseguramos que las imágenes se vean bien en móviles */
+@media (max-width: 768px) {
+  img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    max-width: 100%; /* No excederá el ancho de la pantalla */
   }
 }
