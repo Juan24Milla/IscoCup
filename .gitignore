@@ -1,0 +1,17 @@
+# Ignorar carpetas específicas
+OneDrive/
+AppData/
+Saved\ Games/
+Downloads/
+Videos/
+Music/
+.vscode/
+
+# Archivos del sistema operativo
+*.bak
+*.log
+*.swp
+.DS_Store
+Thumbs.db
+NTUSER.DAT*
+*.exe
